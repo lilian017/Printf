@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	va_list lad;
 	va_start(lad, format);
 
-	while ((d == *format++) != '\0')
+	while ((d == *format) != '\0')
 	{
 		if (d == '%')
 		{
@@ -43,6 +43,7 @@ int _printf(const char *format, ...)
 			putchar(d);
 			i++;
 		}
+		format++;
 	}
 	va_end(lad);
 	return (i);

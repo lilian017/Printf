@@ -25,10 +25,10 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				case 's':
-					i += fputs(va_arg(lad, const char), stdout);
+					i += fputs(va_arg(lad, const char*), stdout);
 					break;
 				case '%':
-					putchar("%");
+					putchar(i);
 					i++;
 					break;
 				default:
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(c);
+			putchar(d);
 			i++;
 		}
 	}

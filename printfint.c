@@ -54,13 +54,14 @@ int printf_int(va_list args)
 int printf_dec(va_list args)
 {
 	int lad = va_arg(args, int);
-	int n, lst, dgt, i;
-	int i = 1;
-	int xp = 1;
+	int n, lst, dgt, xp, i;
+	lst = lad % 10;
+	i = 1;
+	xp = 1;
 	lad = lad /10;
 	n = lad;
 
-	if (lst , 0)
+	if (lst > 0)
 	{
 		_putchar('-');
 		n = -n;

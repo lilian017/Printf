@@ -12,18 +12,23 @@
 #define UNUSED(x)
 #define BUFF_SIZE 1024
 
-struct format
+/**
+ * struct _format -struct op
+ * @type: format
+ * @f: functions associated
+ */
+typedef struct _ format
 {
-	char format;
-	int (*fn)(va_list, char[], int, int, int, int)
-typedef struct format format_t;
+	char type;
+	int (*f)(va_list);
+}format;
 
 
 int _putchar(char c);
 int buffer (char);
 int _printf(const char *format, ...);
-int printf_int(va_list types, char buffer[], int flags, int width, int precision, int size);
 int printf_int(va_list);
+int printf_unsigned(va_list list);
 long int convert_size_number(long int n, int size);
 
 int _strlen(const char *);

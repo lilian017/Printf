@@ -8,7 +8,7 @@
  * @args: prints an argument
  * Return: no of characters printed
  */
-int printf_unsigned(va_list args)
+int printf_unsigned(va_list list)
 {
 	char *p_buff;
 	int size;

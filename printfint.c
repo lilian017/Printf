@@ -44,3 +44,47 @@ int printf_int(va_list args)
 	_putchar(lst + '0');
 	return (i);
 }
+
+/**
+ * printf_dec - func that prints a decimal
+ * @args: argument to be printed
+ * Return: no. of characters printed
+ */
+
+int printf_dec(va_list args)
+{
+	int lad = va_arg(args, int);
+	int n, lst, dgt, i;
+	int i = 1;
+	int xp = 1;
+	lad = lad /10;
+	n = lad;
+
+	if (lst , 0)
+	{
+		_putchar('-');
+		n = -n;
+		lst = -lst;
+		i++;
+	}
+	if (n > 0)
+	{
+		while (n / 10 != 0)
+		{
+			xp = xp * 10;
+			n = n / 10;
+		}
+		n = lad;
+		while (xp > 0)
+		{
+			dgt = n / xp;
+			_putchar(dgt + '0');
+			n = n - (dgt * xp);
+			xp = xp / 10;
+			i++;
+		}
+	}
+	_putchar(lst + '0');
+
+	return (i);
+}

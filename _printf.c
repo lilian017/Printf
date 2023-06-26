@@ -10,10 +10,11 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	char d;
+
 	va_list lad;
 	va_start(lad, format);
 
-	while ((d == *format++) != '\0')
+	while ((d = *format++) != '\0')
 	{
 		if (d == '%')
 		{
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 					i += fputs(va_arg(lad, const char*), stdout);
 					break;
 				case '%':
-					putchar(i);
+					putchar('%');
 					i++;
 					break;
 				default:

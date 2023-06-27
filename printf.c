@@ -47,6 +47,8 @@ int _printf(const char *format, ...)
  * _spec_handler - funct that handles specifier
  * @lad: argument lists
  * @spec: specifier
+ * @width: width of string
+ * @length: length of string
  * Return: argument length
  */
 int _spec_handler(va_list lad, char spec, int width, char length)
@@ -58,6 +60,7 @@ int _spec_handler(va_list lad, char spec, int width, char length)
 	else if (spec == 's')
 	{
 		char *str = va_arg(lad, char *);
+
 		if (width == -1)
 			lgth += _putstr(str);
 		else

@@ -8,6 +8,42 @@
  */
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
+	int count = 0;
+	char c;
+	va_list args;
+	va_start(args, format);
+
+	while ((c = *format++) != '\0')
+	{
+		if (c == '%')
+		{
+			c = *format++;
+			switch (c)
+			{
+				case 'c':
+					putchar(va_arg(args, int));
+					count++;
+					break;
+				case 's':
+					count += fputs(va_arg(args, const char*), stdout);
+					break;
+				case '%':
+					putchar('%');
+					count++;
+					break;
+				default:
+					putchar('%');
+					putchar(c);
+					count += 2;
+					break;
+			}
+		}
+		else
+		{
+			putchar(c);
+			count++;
+=======
 	va_list lad;
 	int i = 0, lgth = 0;
 
@@ -24,14 +60,19 @@ int _printf(const char *format, ...)
 			if (!format[i])
 				return (-1);
 			lgth += _spec_handler(lad, format[i]);
+>>>>>>> refs/remotes/origin/main
 		}
 		i++;
 	}
+<<<<<<< HEAD
+	va_end(args);
+	return count;
+=======
 	va_end(lad);
 
 	return (lgth);
+>>>>>>> refs/remotes/origin/main
 }
-
 /**
  * _spec_handler - the funct that handles the specifier passed to _print
  * @lad: list of arguments

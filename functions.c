@@ -22,3 +22,26 @@ int _putuint(unsigned int n)
 
 	return (lgth);
 }
+
+/** _putoct - a function that prints octal stout
+ * @n: printed numbers
+ * Return: length of printed string -1
+ */
+int _putoct(unsigned int n)
+{
+	int lgth = 0;
+	unsigned int lad;
+
+	if (n < 8)
+	{
+		lgth += _putint(n);
+		return (lgth);
+	}
+	lad = n % 8;
+	n = n / 8;
+	if (n)
+		lgth += _putoct(n);
+	lgth += _putchar(lad + '0');
+
+	return (lgth);
+}

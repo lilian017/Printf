@@ -10,13 +10,13 @@ int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
-	va_list list;
+	va_list lad;
 	char buffer[BUFF_SIZE];
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(list, format);
+	va_start(lad, format);
 
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 
 	print_buffer(buffer, &buff_ind);
 
-	va_end(list);
+	va_end(lad);
 
 	return (printed_chars);
 }

@@ -3,9 +3,19 @@
 
 
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
+#include <stddef.h>
+
+#define _INT_MIN (1 << (sizeof(int) * 8 -1))
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printf_int(va_list args);
+int _putint(int n);
+int _putstr(char *str);
+int _putbit(unsigned int n);
+int _putuint(unsigned int n);
+int _spec_handler(va_list le_args, char spec);
 
 #endif

@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _putuint - function that prints unsigned decimal
- * @n: printed number
- * Return: length of printed strength
+ * @n: printed number 
+ * Return: length of printed strength -1
  */
 int _putuint(unsigned int n)
 {

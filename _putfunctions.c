@@ -24,7 +24,7 @@ int _putstr(char *str)
 		i = _putstr("(null");
 	else
 	{
-		while(str[i])
+		while (str[i])
 		{
 			_putchar(str[i]);
 			i++;
@@ -36,16 +36,16 @@ int _putstr(char *str)
 /**
  * _putint - prints integers in stdout
  * @n: number that is printed
- * @Return: length of characters printed -1
+ * Return: lgth of characters printed -1
  */
 int _putint(int n)
 {
 	int lad, lgth = 0;
 
-	if(!n)
+	if (!n)
 	{
 		lgth += _putchar('0');
-		return(lgth);
+		return (lgth);
 	}
 	if (n == _INT_MIN)
 	{

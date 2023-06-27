@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _putuint - function that prints unsigned decimal
- * @n: printed number 
+ * @n: printed number
  * Return: length of printed strength -1
  */
 int _putuint(unsigned int n)
@@ -22,8 +22,8 @@ int _putuint(unsigned int n)
 
 	return (lgth);
 }
-
-/** _putoct - a function that prints octal stout
+/**
+ * _putoct - a function that prints octal stout
  * @n: printed numbers
  * Return: length of printed string -1
  */

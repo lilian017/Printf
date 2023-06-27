@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/*
- *  _printf - a function that prints om stdout
+/**
+ *  _printf - a function that prints on stdout
  * @format: printed string
  * Return; string lgth
  */
@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	int i = 0, lgth = 0;
 
 	va_start(lad, format);
-	
 	if (!format)
 		return (-1);
 	while (format[i])
@@ -38,12 +37,13 @@ int _printf(const char *format, ...)
 /**
  * _spec_handler - funct that handles specifier
  * @lad: argument lists
- * @spec: specifier 
+ * @spec: specifier
  * Return: argument length
  */
 int _spec_handler (va_list lad, char spec)
 {
 	int lgth = 0;
+
 	if (spec == 'c')
 		lgth += _putchar(va_arg(lad, int));
 	else if (spec == 's')

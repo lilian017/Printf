@@ -9,7 +9,7 @@
 #include <limits.h>
 #include <stddef.h>
 
-#define _INT_MIN (1 << (sizeof(int) * 8 -1))
+#define _INT_MIN (1 << (sizeof(int) * 8 - 1))
 
 int _putchar(char c);
 int _printf(const char *format, ...);

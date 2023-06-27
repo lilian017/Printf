@@ -3,9 +3,9 @@
 #include <stdarg.h>
 
 /**
- *  _printf - a function that prints on stdout
+ * _printf - a function that prints on stdout
  * @format: printed string
- * Return; string lgth
+ * Return: string lgth
  */
 
 int _printf(const char *format, ...)

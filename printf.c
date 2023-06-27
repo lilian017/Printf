@@ -2,6 +2,15 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+int _putchar(char c);
+int _putstr(char *str);
+int _putint(int n);
+int _putbit(unsigned int n);
+int _putuint(unsigned int n);
+int _putoct(unsigned int n);
+int _printf(const char *format, ...);
+int _spec_handler(va_list lad, char spec);
+
 /**
  * _printf - a function that prints on stdout
  * @format: printed string

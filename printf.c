@@ -67,6 +67,8 @@ int _spec_handler (va_list lad, char spec)
 		lgth += _putuint(va_arg(lad, unsigned int));
 	else if (spec == 'o')
 		lgth += _putoct(va_arg(lad, unsigned int));
+	else if (spec == 'x' || spec == 'X')
+		lgth += _puthex(va_arg(lad, int), spec);
 
 	else
 		lgth += _printf("%%%c", spec);

@@ -18,6 +18,7 @@ int _putstr(char *str);
 int _putbit(unsigned int n);
 int _putuint(unsigned int n);
 int _putoct(unsigned int n);
+int _puthex(unsigned int n, char alpha);
 int _spec_handler(va_list lad, char spec);
 
 #endif

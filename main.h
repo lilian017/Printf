@@ -21,4 +21,4 @@ int _putoct(unsigned int n);
 int _puthex(unsigned int n, char alpha);
 int _spec_handler(va_list lad, char spec);
 
-#endif
+#endif /* MAIN_H */

@@ -18,7 +18,11 @@ int _putstr(char *str);
 int _putbit(unsigned int n);
 int _putuint(unsigned int n);
 int _putoct(unsigned int n);
-int _puthex(unsigned int n, char alpha);
-int _spec_handler(va_list lad, char spec);
+int _puthex(unsigned int n, int uppercase);
+int _putbin(unsigned int n);
+int _putstr_special(char *str);
+int _putptr(void *ptr);
+int _putstr_rev(char *str);
+int _putstr_rot13(char *str);
 
 #endif /* MAIN_H */
